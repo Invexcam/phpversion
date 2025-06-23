@@ -2,7 +2,7 @@
 services:
   web:
     image: php:8.2-apache
-    container_name: php_web
+    container_name: php_web_invexqr
     ports:
       - "8087:80"
     volumes:
