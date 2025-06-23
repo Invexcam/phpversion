@@ -7,16 +7,14 @@ services:
       - "8087:80"
     volumes:
       - ./:/var/www/html
-      - ./apache.conf:/etc/apache2/conf-available/servername.conf
-    command: ["/bin/bash", "-c", "apache2ctl -D FOREGROUND && a2enconf servername.conf"]
     depends_on:
       - db
     environment:
-      - DB_HOST=db
-      - DB_NAME=invexqr
-      - DB_USER=postgres
-      - DB_PASSWORD=invexqr2025
-      
+      DB_HOST: db
+      DB_NAME: invexqr
+      DB_USER: postgres
+      DB_PASSWORD: invexqr2025
+
   db:
     image: postgres:15
     container_name: postgres_db
@@ -36,3 +34,4 @@ services:
 
 volumes:
   db_data:
+
