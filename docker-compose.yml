@@ -6,7 +6,7 @@ services:
     ports:
       - "8087:80"
     volumes:
-      - ./invexqrphp:/var/www/html
+      - ./:/var/www/html   # Ici, le dossier courant est ~/Invexapps/invexqrphp
     depends_on:
       - db
     environment:
