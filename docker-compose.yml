@@ -6,7 +6,7 @@ services:
     ports:
       - "8087:80"
     volumes:
-      - ./:/var/www/html
+      - ./invexqrphp:/var/www/html
     depends_on:
       - db
     environment:
@@ -26,7 +26,6 @@ services:
       VITE_FIREBASE_API_KEY: AIzaSyAEdlkepge2d3SnlLrpEoJkqv8PAjISfVA
       VITE_FIREBASE_APP_ID: invextrack-a1001
       VITE_FIREBASE_PROJECT_ID: 1:746716963518:web:0faf49c4b09299ba2a74ef
-      SESSION_SECRET: I$yXqM7ZfR3!Tq1cWopE8Azz0m2YBkPv
       PAYPAL_CLIENT_ID: AXu-EpJWDQ7Bl7Z_rQ6llW8QokphIfWfBPeyfv1aHbqQl8wGS5Ak_l6P0YCJtp3r2BYlQn6-zP_MjG7v
       PAYPAL_CLIENT_SECRET: sk_9a8s7df98a7sdf98a7sd9f8a7sd9f87a
     volumes:
