@@ -10,18 +10,18 @@ services:
     depends_on:
       - db
     environment:
-      DB_HOST: db
+      DB_HOST: invexqr_db
       DB_NAME: invexqr
-      DB_USER: postgres
+      DB_USER: invexqr_user
       DB_PASSWORD: invexqr2025
 
   db:
     image: postgres:15
-    container_name: postgres_db
+    container_name: postgres_invexqr_db
     restart: always
     environment:
       POSTGRES_DB: invexqr
-      POSTGRES_USER: postgres
+      POSTGRES_USER: invexqr_user
       POSTGRES_PASSWORD: invexqr2025
       VITE_FIREBASE_API_KEY: AIzaSyAEdlkepge2d3SnlLrpEoJkqv8PAjISfVA
       VITE_FIREBASE_APP_ID: invextrack-a1001
