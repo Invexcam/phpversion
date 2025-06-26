@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "QR Code Generator PHP Application",
   "scripts": {
-    "dev": "php -S localhost:8080 -t . server.php",
-    "start": "php -S localhost:8080 -t . server.php",
-    "install": "php setup-production.php",
-    "test": "php simple-test.php"
+    "dev": "echo 'Use: docker-compose up -d && docker-compose exec web php -S localhost:8080 -t . server.php'",
+    "start": "echo 'Use: docker-compose up -d && docker-compose exec web php -S localhost:8080 -t . server.php'",
+    "setup": "echo 'Use: docker-compose exec web php setup-production.php'",
+    "test": "echo 'Use: docker-compose exec web php simple-test.php'"
   },
   "dependencies": {},
   "devDependencies": {}
